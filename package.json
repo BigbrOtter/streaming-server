@@ -2,23 +2,25 @@
   "name": "streamingserver",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BigbrOtter/streaming-server.git"
   },
-  "author": "Rick Lambrechts <rick@lambrechts.nu> (ricklambrechts.nl)",
-  "license": "ISC",
+  "author": "BigbrOtter",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BigbrOtter/streaming-server/issues"
   },
   "homepage": "https://github.com/BigbrOtter/streaming-server#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+	"ejs": "2.5.x",
+    "sequent": ">= 0.1.2"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
