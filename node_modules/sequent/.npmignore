@@ -1,0 +1,8 @@
+*.swp
+*.swo
+*~
+.git*
+Makefile
+src/
+test/
+node_modules/
