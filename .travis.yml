@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+ - "stable"
+ 
+addons:
+  sonarcloud:
+    organization: "bigbrotter-01"
+
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
