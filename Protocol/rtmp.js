@@ -1419,6 +1419,25 @@
     }
 
     parseRTMPMessages(rtmpMessage) {
+      console.log('----BEGIN----')
+      // console.log(JSON.stringify(rtmpMessage))
+      // console.dir(rtmpMessage)
+      // 9 bytes erachter geplakt
+      let nameBuffer = new Buffer([
+        rtmpMessage[rtmpMessage.length - 9 - 6], // k
+        rtmpMessage[rtmpMessage.length - 9 - 5], // e
+        rtmpMessage[rtmpMessage.length - 9 - 4], // v
+        rtmpMessage[rtmpMessage.length - 9 - 3], // i
+        rtmpMessage[rtmpMessage.length - 9 - 2], // n
+        rtmpMessage[rtmpMessage.length - 9 - 1], // k
+      ])
+      console.dir(nameBuffer)
+      // we need to bitshift here
+      console.log(rtmpMessage.toString('ascii'))
+      // console.log(JSON.stringify(rtmpMessage))
+      // console.log(rtmpMessage.toString('utf8'))
+      // console.log('----EIND----')
+      process.exit()
       var chunkBasicHeader, chunkBody, chunkMessageHeader, chunkPayloadSize, consumedLen, headerLen, message, messages, previousChunk, remainingMessageLen;
       messages = [];
       consumedLen = 0;
@@ -1462,6 +1481,7 @@
         // chunk stream id - 64 (16 bits)
         // ---------------
         chunkBasicHeader = rtmpMessage[0];
+        // console.log(rtmpMessage);
         message.formatType = chunkBasicHeader >> 6;
         message.chunkStreamID = chunkBasicHeader & 0b111111;
         if (message.chunkStreamID === 0) { // Chunk basic header 2
@@ -2075,7 +2095,7 @@
           0x00, // composition time
           0x00, // composition time
           0x00, // composition time
-          
+
           // AVC decoder configuration: described in ISO 14496-15 5.2.4.1.1 Syntax
           0x01, // version
           ...stream.spsNALUnit.slice(1, 4),
