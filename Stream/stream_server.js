@@ -61,6 +61,7 @@
           return this.onReceiveVideoControlBuffer(stream);
         });
         this.rtmpServer.on('video_data', (streamId, pts, dts, nalUnits) => {
+          console.log(`Got stream from ${streamId}`)
           var stream;
           stream = avstreams.get(streamId);
           if (stream != null) {
