@@ -4,9 +4,9 @@
   //   RFC 4566  https://tools.ietf.org/html/rfc4566
   var aac, api, logger;
 
-  aac = require('./aac');
+  aac = require('../Encoding/aac');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
   api = {
     // opts:

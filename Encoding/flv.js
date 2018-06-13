@@ -2,13 +2,13 @@
 (function() {
   var Bits, aac, api, h264, logger;
 
-  h264 = require('./h264');
+  h264 = require('../Encoding/h264');
 
-  aac = require('./aac');
+  aac = require('../Encoding/aac');
 
-  Bits = require('./bits');
+  Bits = require('../Encoding/bits');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
   api = {
     SOUND_FORMAT_AAC: 10, // AAC

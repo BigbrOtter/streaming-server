@@ -15,23 +15,23 @@
 
   Sequent = require('sequent');
 
-  rtmp_handshake = require('./rtmp_handshake');
+  rtmp_handshake = require('../Protocol/rtmp_handshake');
 
-  codec_utils = require('./codec_utils');
+  codec_utils = require('../Encoding/codec_utils');
 
-  config = require('./config');
+  config = require('../Config/config');
 
-  h264 = require('./h264');
+  h264 = require('../Encoding/h264');
 
-  aac = require('./aac');
+  aac = require('../Encoding/aac');
 
-  flv = require('./flv');
+  flv = require('../Encoding/flv');
 
-  avstreams = require('./avstreams');
+  avstreams = require('../Encoding/avstreams');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
-  Bits = require('./bits');
+  Bits = require('../Encoding/bits');
 
   // enum
   SESSION_STATE_NEW = 1;

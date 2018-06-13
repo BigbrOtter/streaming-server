@@ -14,7 +14,7 @@
 
   Sequent = require('sequent');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
   // Directory to store EJS templates
   TEMPLATE_DIR = `${__dirname}/template`;
@@ -26,7 +26,7 @@
   DIRECTORY_INDEX_FILENAME = 'index.html';
 
   // Server name which is embedded in HTTP response header
-  DEFAULT_SERVER_NAME = 'node-rtsp-rtmp-server';
+  DEFAULT_SERVER_NAME = 'Big Brotter';
 
   // Response larger than this bytes is compressed
   GZIP_SIZE_THRESHOLD = 300;

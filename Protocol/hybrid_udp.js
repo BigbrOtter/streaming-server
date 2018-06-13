@@ -36,7 +36,7 @@
 
   dgram = require('dgram');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
   MAX_PACKET_ID = 255;
 

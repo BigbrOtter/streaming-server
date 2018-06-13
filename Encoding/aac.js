@@ -5,9 +5,9 @@
 
   fs = require('fs');
 
-  Bits = require('./bits');
+  Bits = require('../Encoding/bits');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
   audioBuf = null;
 

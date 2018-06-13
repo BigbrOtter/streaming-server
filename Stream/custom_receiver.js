@@ -6,13 +6,13 @@
 
   fs = require('fs');
 
-  config = require('./config');
+  config = require('../Config/config');
 
-  avstreams = require('./avstreams');
+  avstreams = require('../Encoding/avstreams');
 
-  hybrid_udp = require('./hybrid_udp');
+  hybrid_udp = require('../Protocol/hybrid_udp');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
   TAG = 'custom_receiver';
 

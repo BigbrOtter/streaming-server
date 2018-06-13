@@ -11,29 +11,29 @@
 
   crypto = require('crypto');
 
-  config = require('./config');
+  config = require('../Config/config');
 
-  rtmp = require('./rtmp');
+  rtmp = require('../Protocol/rtmp');
 
-  http = require('./http');
+  http = require('../Protocol/http');
 
-  rtsp = require('./rtsp');
+  rtsp = require('../Protocol/rtsp');
 
-  h264 = require('./h264');
+  h264 = require('../Encoding/h264');
 
-  aac = require('./aac');
+  aac = require('../Encoding/aac');
 
-  mp4 = require('./mp4');
+  //mp4 = require('./mp4');
 
-  Bits = require('./bits');
+  Bits = require('../Encoding/bits');
 
-  avstreams = require('./avstreams');
+  avstreams = require('../Encoding/avstreams');
 
-  CustomReceiver = require('./custom_receiver');
+  CustomReceiver = require('../Stream/custom_receiver');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
-  packageJson = require('./package.json');
+  packageJson = require('../package.json');
 
   Sequent = require('sequent');
 

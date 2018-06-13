@@ -20,23 +20,23 @@
 
   Sequent = require('sequent');
 
-  rtp = require('./rtp');
+  rtp = require('../Protocol/rtp');
 
-  sdp = require('./sdp');
+  sdp = require('../Encoding/sdp');
 
-  h264 = require('./h264');
+  h264 = require('../Encoding/h264');
 
-  aac = require('./aac');
+  aac = require('../Encoding/aac');
 
-  http = require('./http');
+  http = require('../Protocol/http');
 
-  avstreams = require('./avstreams');
+  avstreams = require('../Encoding/avstreams');
 
-  Bits = require('./bits');
+  Bits = require('../Encoding/bits');
 
-  logger = require('./logger');
+  logger = require('../logger');
 
-  config = require('./config');
+  config = require('../Config/config');
 
   enabledFeatures = [];
 
