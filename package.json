@@ -4,7 +4,7 @@
   "description": "",
   "main": "Stream/server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon Stream/server.js",
     "test": "mocha --exit"
   },
   "repository": {
@@ -18,12 +18,8 @@
   },
   "homepage": "https://github.com/BigbrOtter/streaming-server#readme",
   "dependencies": {
-<<<<<<< HEAD
-    "ejs": "2.5.x",
-=======
     "express": "^4.16.3",
-	"ejs": "2.5.x",
->>>>>>> parent of 729830b... nodemon toevoeging
+  	"ejs": "2.5.x",
     "sequent": ">= 0.1.2"
   },
   "devDependencies": {
