@@ -1419,6 +1419,7 @@
     }
 
     parseRTMPMessages(rtmpMessage) {
+      /*
       console.log('----BEGIN----')
       // console.log(JSON.stringify(rtmpMessage))
       // console.dir(rtmpMessage)
@@ -1438,6 +1439,7 @@
       // console.log(rtmpMessage.toString('utf8'))
       // console.log('----EIND----')
       process.exit()
+      */
       var chunkBasicHeader, chunkBody, chunkMessageHeader, chunkPayloadSize, consumedLen, headerLen, message, messages, previousChunk, remainingMessageLen;
       messages = [];
       consumedLen = 0;

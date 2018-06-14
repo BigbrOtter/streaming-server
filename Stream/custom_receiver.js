@@ -138,6 +138,7 @@
     }
 
     startTCP() {
+      console.log('startTCP() in custom_receiver.js')
       this.videoControlReceiver.listen(config.videoControlReceiverPort, config.receiverListenHost, config.receiverTCPBacklog, function() {
         return logger.debug(`[${TAG}] videoControl socket: tcp:${config.videoControlReceiverPort}`);
       });
@@ -153,6 +154,7 @@
     }
 
     startUDP() {
+      console.log('startUDP() in custom_receiver.js')
       this.videoControlReceiver.start(config.videoControlReceiverPort, config.receiverListenHost, function() {
         return logger.debug(`[${TAG}] videoControl socket: udp:${config.videoControlReceiverPort}`);
       });
