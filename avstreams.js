@@ -9,17 +9,17 @@
 
   path = require('path');
 
-  h264 = require('../Encoding/h264');
+  h264 = require('./h264');
 
-  aac = require('../Encoding/aac');
+  aac = require('./aac');
 
-  //mp4 = require('./mp4');
+  mp4 = require('./mp4');
 
-  Bits = require('../Encoding/bits');
+  Bits = require('./bits');
 
-  EventEmitterModule = require('../event_emitter');
+  EventEmitterModule = require('./event_emitter');
 
-  logger = require('../logger');
+  logger = require('./logger');
 
   createStreamId = function() {
     var buf, e, shasum;

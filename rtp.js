@@ -12,11 +12,11 @@
   //       DON is to RTP what DTS is to MPEG-TS.
   var Bits, EPOCH, MAX_PAYLOAD_SIZE, MAX_SEQUENCE_NUMBER, NTP_SCALE_FRAC, RTPParser, RTP_HEADER_LEN, aac, api, logger;
 
-  Bits = require('../Encoding/bits');
+  Bits = require('./bits');
 
-  aac = require('../Encoding/aac');
+  aac = require('./aac');
 
-  logger = require('../logger');
+  logger = require('./logger');
 
   // Number of seconds from 1900-01-01 to 1970-01-01
   EPOCH = 2208988800;

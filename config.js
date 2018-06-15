@@ -78,11 +78,11 @@
       hasVideo: true,
       // See: Adobe Flash Video File Format Specification Version 10.1 - E.4.3.1 VIDEODATA
       videocodecid: 7, // H.264
-
+      
       // See: Adobe Flash Video File Format Specification Version 10.1 - E.4.2.1 AUDIODATA
       audiocodecid: 10 // AAC
     },
-
+    
     //##############################
     /* Advanced configurations */
     //##############################
@@ -91,22 +91,22 @@
     audioPeriodSize: 1024,
     // HTTP keepalive timeout
     keepaliveTimeoutMs: 30000, // milliseconds
-
+    
     // RTSP
     rtcpSenderReportIntervalMs: 5000, // milliseconds
-
+    
     // RTMP ping timeout
     rtmpPingTimeoutMs: 5000, // milliseconds
-
+    
     // RTMP session timeout
     rtmpSessionTimeoutMs: 600000, // milliseconds
-
+    
     // RTMPT session timeout
     rtmptSessionTimeoutMs: 600000, // milliseconds
-
+    
     // RTMP play chunk size
     rtmpPlayChunkSize: 4096, // bytes
-
+    
     // Maximum number of RTMP messages being sent at once
     rtmpMessageQueueSize: 5,
     // For HE-AAC streaming over RTSP:

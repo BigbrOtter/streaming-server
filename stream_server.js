@@ -11,29 +11,29 @@
 
   crypto = require('crypto');
 
-  config = require('../Config/config');
+  config = require('./config');
 
-  rtmp = require('../Protocol/rtmp');
+  rtmp = require('./rtmp');
 
-  http = require('../Protocol/http');
+  http = require('./http');
 
-  rtsp = require('../Protocol/rtsp');
+  rtsp = require('./rtsp');
 
-  h264 = require('../Encoding/h264');
+  h264 = require('./h264');
 
-  aac = require('../Encoding/aac');
+  aac = require('./aac');
 
-  //mp4 = require('./mp4');
+  mp4 = require('./mp4');
 
-  Bits = require('../Encoding/bits');
+  Bits = require('./bits');
 
-  avstreams = require('../Encoding/avstreams');
+  avstreams = require('./avstreams');
 
-  CustomReceiver = require('../Stream/custom_receiver');
+  CustomReceiver = require('./custom_receiver');
 
-  logger = require('../logger');
+  logger = require('./logger');
 
-  packageJson = require('../package.json');
+  packageJson = require('./package.json');
 
   Sequent = require('sequent');
 
@@ -61,7 +61,6 @@
           return this.onReceiveVideoControlBuffer(stream);
         });
         this.rtmpServer.on('video_data', (streamId, pts, dts, nalUnits) => {
-          // console.log(`Got stream from ${streamId}`)
           var stream;
           stream = avstreams.get(streamId);
           if (stream != null) {

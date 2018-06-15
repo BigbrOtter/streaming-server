@@ -7,9 +7,9 @@
 
   fs = require('fs');
 
-  Bits = require('../Encoding/bits');
+  Bits = require('./bits');
 
-  logger = require('../logger');
+  logger = require('./logger');
 
   videoBuf = null;
 

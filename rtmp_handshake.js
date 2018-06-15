@@ -5,9 +5,9 @@
 
   crypto = require('crypto');
 
-  codec_utils = require('../Encoding/codec_utils');
+  codec_utils = require('./codec_utils');
 
-  logger = require('../logger');
+  logger = require('./logger');
 
   MESSAGE_FORMAT_1 = 1;
 

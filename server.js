@@ -4,13 +4,13 @@
 
   url = require('url');
 
-  config = require('../Config/config');
+  config = require('./config');
 
-  StreamServer = require('../Stream/stream_server');
+  StreamServer = require('./stream_server');
 
-  Bits = require('../Encoding/bits');
+  Bits = require('./bits');
 
-  logger = require('../logger');
+  logger = require('./logger');
 
   Bits.set_warning_fatal(true);
 

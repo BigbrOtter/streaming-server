@@ -5,9 +5,9 @@
 
   fs = require('fs');
 
-  Bits = require('../Encoding/bits');
+  Bits = require('./bits');
 
-  logger = require('../logger');
+  logger = require('./logger');
 
   TS_PACKET_SIZE = 188;
 
