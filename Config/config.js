@@ -10,7 +10,7 @@
     //###########################
 
     // Server listen port
-    serverPort: 80,
+    serverPort: 8090,
     // RTMP server listen port
     rtmpServerPort: 1935,
     // Server name which will be embedded in

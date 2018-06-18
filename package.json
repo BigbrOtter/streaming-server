@@ -1,30 +1,63 @@
 {
-  "name": "streamingserver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "Stream/server.js",
-  "scripts": {
-    "start": "nodemon Stream/server.js",
-    "test": "mocha --exit"
+  "_from": "node-media-server",
+  "_id": "node-media-server@1.3.5",
+  "_inBundle": false,
+  "_integrity": "sha512-xFGJRt2A6L5QsTdYEAf4s6y/cQyZV0TPEv+mDxE/svuqH7QiED9e7mQNQWRBETznSJFPP7lnWxVaq3mrfbI+sg==",
+  "_location": "/node-media-server",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "node-media-server",
+    "name": "node-media-server",
+    "escapedName": "node-media-server",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-media-server/-/node-media-server-1.3.5.tgz",
+  "_shasum": "6456d1ee64fb8ba8cd935867d1b618c54d54b384",
+  "_spec": "node-media-server",
+  "_where": "C:\\Users\\Ewout\\Documents\\GitHub\\streaming-server",
+  "author": {
+    "name": "Mingliang Chen"
+  },
+  "bugs": {
+    "url": "https://github.com/illuspas/Node-Media-Server/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mkdirp": "^0.5.1",
+    "ws": "^5.1.1"
+  },
+  "deprecated": false,
+  "description": "A Node.js implementation of RTMP Server",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "homepage": "https://github.com/illuspas/Node-Media-Server#readme",
+  "keywords": [
+    "rtmp",
+    "flv",
+    "server"
+  ],
+  "license": "MIT",
+  "main": "node_media_server.js",
+  "name": "node-media-server",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BigbrOtter/streaming-server.git"
+    "url": "git+https://github.com/illuspas/Node-Media-Server.git"
   },
-  "author": "BigbrOtter",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/BigbrOtter/streaming-server/issues"
+  "scripts": {
+    "test": "node app.js"
   },
-  "homepage": "https://github.com/BigbrOtter/streaming-server#readme",
-  "dependencies": {
-    "express": "^4.16.3",
-  	"ejs": "2.5.x",
-    "sequent": ">= 0.1.2"
-  },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.14.11"
-  }
+  "version": "1.3.5"
 }
