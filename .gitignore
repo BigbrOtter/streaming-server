@@ -31,3 +31,5 @@ node_modules/w*
 node_modules/x*
 node_modules/y*
 node_modules/z*
+
+.idea
