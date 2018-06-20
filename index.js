@@ -14,6 +14,7 @@ const config = {
     },
     http: {
         port: 8000,
+        mediaroot: './media',
         allow_origin: '*'
     },
     trans: {
@@ -23,13 +24,15 @@ const config = {
                 app: 'vod',
                 ac: 'aac',
                 mp4: true,
-                mp4Flags: '[movflags=faststart]',
+                mp4Flags: '[movflags=faststart]'
             },
             {
                 app: 'live',
                 ac: 'aac',
                 hls: true,
-                hlsFlags: '[hls_time=2:hls_list_size=3:hls_flags=delete_segments]'
+                hlsFlags: '[hls_time=2:hls_list_size=3]',
+                mp4: true,
+                mp4Flags: '[movflags=faststart]'
             }
         ]
     }
