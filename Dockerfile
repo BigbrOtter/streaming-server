@@ -1,6 +1,7 @@
-FROM node:8
+FROM rickydunlop/nodejs-ffmpeg
 
 # Create app directory
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Install app dependencies
