@@ -3,11 +3,6 @@ const chokidar = require('chokidar');
 const NodeRSA = require('node-rsa');
 const crypto = require('crypto');
 const fs = require('fs');
-const express = require('express');
-const app = express();
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
-
 
 const config = {
     rtmp: {
@@ -34,10 +29,11 @@ const config = {
         ]
     }
 };
-const nms = new NodeMediaServer(config);
+var nms = new NodeMediaServer(config);
 nms.run();
 
 const watcher = chokidar.watch('./media/live', {ignored: /(.+\.m3u8)|(.+\.ehash)/, persistent: true, depth: 3});
+
 watcher
     .on('add', (path) => {
         // console.log('File', path, 'has been added');

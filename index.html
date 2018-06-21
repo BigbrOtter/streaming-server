@@ -1,5 +1,4 @@
 <script src="https://cdn.bootcss.com/flv.js/1.4.0/flv.min.js"></script>
-<script src="http://localhost:3000/socket.io/socket.io.js"></script>
 <video id="videoElement" controls></video>
 <script>
     if (flvjs.isSupported()) {
@@ -12,8 +11,4 @@
         flvPlayer.load();
         flvPlayer.play();
     }
-     var socket = io('http://localhost:3000/ns1')
-     socket.on('connect', function(){
-       console.log('connected')
-     })
 </script>
