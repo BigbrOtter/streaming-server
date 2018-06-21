@@ -34,9 +34,10 @@ const config = {
         ]
     }
 };
+const nms = new NodeMediaServer(config);
+nms.run();
 
-var watcher = chokidar.watch('./media/live', {ignored: /(.+\.m3u8)|(.+\.ehash)/, persistent: true, depth: 3});
-
+const watcher = chokidar.watch('./media/live', {ignored: /(.+\.m3u8)|(.+\.ehash)/, persistent: true, depth: 3});
 watcher
     .on('add', (path) => {
         // console.log('File', path, 'has been added');
@@ -70,31 +71,27 @@ watcher
     })
     .on('error', (error) => {console.error('Error happened', error);});
 
-    /*
-    * View Count
-    */
+/*
+* View Count
+*/
+let clients = null;
+const ns1 = io.of('/ns1'); // Link voor request?
 
-    var clients = null;
-    var ns1 = io.of('/ns1') // Link voor request?
+// Get View Count
+function getClientsCouts() {
+  ns1.clients((error, socketsInRoom) => {
+    if (error) throw error;
+    console.log(socketsInRoom.length)
+  });
+}
 
-    // Get View Count
-    function getClientsCouts() {
-      ns1.clients((error, socketsInRoom) => {
-        if (error) throw error;
-        console.log(socketsInRoom.length)
-      });
-    }
-
-    const socketPort = process.env.SOCKETPORT || 3000
-    ns1.on('connection', socket => {
-      clients++;
-      getClientsCouts()
-      socket.on('disconnect', socket => {
-        clients--
-        getClientsCouts()
-      })
-    })
-    server.listen(socketPort)
-
-var nms = new NodeMediaServer(config);
-nms.run();
+const socketPort = process.env.SOCKETPORT || 8001;
+ns1.on('connection', socket => {
+  clients++;
+  getClientsCouts();
+  socket.on('disconnect', socket => {
+    clients--;
+    getClientsCouts()
+  })
+});
+server.listen(socketPort);
