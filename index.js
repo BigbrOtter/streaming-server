@@ -7,7 +7,7 @@ const fs = require('fs');
 const config = {
     rtmp: {
         port: 1935,
-        chunk_size: 60000,
+        chunk_size: 200000,
         gop_cache: true,
         ping: 60,
         ping_timeout: 30
@@ -21,18 +21,10 @@ const config = {
         ffmpeg: '/usr/bin/ffmpeg',
         tasks: [
             {
-                app: 'vod',
-                ac: 'aac',
-                mp4: true,
-                mp4Flags: '[movflags=faststart]'
-            },
-            {
                 app: 'live',
                 ac: 'aac',
                 hls: true,
                 hlsFlags: '[hls_time=2:hls_list_size=3]',
-                mp4: true,
-                mp4Flags: '[movflags=faststart]'
             }
         ]
     }
