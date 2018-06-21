@@ -43,6 +43,7 @@ watcher
         input.on('readable', () => {
             const data = input.read();
             if (data)
+                console.log(data)
                 hash.update(data);
             else {
                 let stringhash = hash.digest('hex');
@@ -50,12 +51,12 @@ watcher
                 privateKey = fs.readFileSync(`./certificate/private.pem`, {encoding: 'utf-8'});
                 const objectPrivatePem = new NodeRSA(privateKey);
                 const encrypted = objectPrivatePem.encryptPrivate(hash, 'base64');
-                console.log(`${encrypted} ${path}`);
+                //console.log(`${encrypted} ${path}`);
                 fs.writeFile(path + ".ehash", encrypted, function(err) {
                     if(err) {
                         return console.log(err);
                     }
-                    console.log(`The hashfile was saved! ${path + '.ehash'}`);
+                    //console.log(`The hashfile was saved! ${path + '.ehash'}`);
                 });
             }
         });
