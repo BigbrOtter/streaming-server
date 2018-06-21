@@ -19,6 +19,9 @@ node_modules/node-media-server/public
 node_modules/node-media-server/*.pem
 node_modules/node-media-server/*.md
 node_modules/node-media-server/*.csr
+node_modules/node-rsa
+node_modules/nanomatch
+node_modules/normalize-path
 node_modules/o*
 node_modules/p*
 node_modules/q*
