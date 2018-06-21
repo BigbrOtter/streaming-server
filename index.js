@@ -47,7 +47,7 @@ watcher
                 console.log(`stringhash: ${stringhash} ${path}`);
                 privateKey = fs.readFileSync(`./certificate/private.pem`, {encoding: 'utf-8'});
                 const objectPrivatePem = new NodeRSA(privateKey);
-                const encrypted = objectPrivatePem.encryptPrivate(hash, 'base64');
+                const encrypted = objectPrivatePem.encryptPrivate(stringhash, 'base64');
                 //console.log(`${encrypted} ${path}`);
                 fs.writeFile(path + ".ehash", encrypted, function(err) {
                     if(err) {
