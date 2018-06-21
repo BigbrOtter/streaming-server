@@ -42,10 +42,10 @@ watcher
         const input = fs.createReadStream(path);
         input.on('readable', () => {
             const data = input.read();
-            if (data)
+            if (data) {
                 console.log(data)
                 hash.update(data);
-            else {
+            }else {
                 let stringhash = hash.digest('hex');
                 console.log(`${stringhash} ${path}`);
                 privateKey = fs.readFileSync(`./certificate/private.pem`, {encoding: 'utf-8'});
