@@ -19,6 +19,7 @@ const config = {
     },
     trans: {
         ffmpeg: '/usr/bin/ffmpeg',
+      // ffmpeg: 'C:\\ffmpeg\\bin\\ffmpeg.exe',
         tasks: [
             {
                 app: 'live',
@@ -39,15 +40,11 @@ watcher
     .on('change', (path) => {
         console.log('File', path, 'has been changed');
         const hash = crypto.createHash('sha256');
-        const input = fs.createReadStream(path);
-        input.on('readable', () => {
-            const data = input.read();
-            if (data) {
-                console.log(data)
+        const input = fs.readFile(path, (err, data) => {
                 hash.update(data);
-            }else {
-                let stringhash = hash.digest('hex');
-                console.log(`${stringhash} ${path}`);
+              let stringhash = hash.digest('hex');
+
+                console.log(`stringhash: ${stringhash} ${path}`);
                 privateKey = fs.readFileSync(`./certificate/private.pem`, {encoding: 'utf-8'});
                 const objectPrivatePem = new NodeRSA(privateKey);
                 const encrypted = objectPrivatePem.encryptPrivate(hash, 'base64');
@@ -58,8 +55,7 @@ watcher
                     }
                     //console.log(`The hashfile was saved! ${path + '.ehash'}`);
                 });
-            }
-        });
+            });
     })
     .on('unlink', (path) => {
         // console.log('File', path, 'has been removed');
